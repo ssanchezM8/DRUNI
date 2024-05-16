@@ -8,11 +8,11 @@ The content of the body element is displayed in your browser.
 <div id='container2341'></div>
 <script type='text/javascript'>
 function init(){
-    $Lightning.use("c:FlowToSiteApp",    // name of the Lightning app
+    $Lightning.use("c:embeddedCaseFormWebApp",    // name of the Lightning app
         function() {                  
             console.log('Callback1');// Callback once framework and app loaded
             $Lightning.createComponent(
-                "c:FlowToSite", // top-level component of your app
+                "c:embeddedCaseFormWeb", // top-level component of your app
                 { },                  // attributes to set on the component when created
                 "container2341",   // the DOM location to insert the component
                 function(cmp) { 
