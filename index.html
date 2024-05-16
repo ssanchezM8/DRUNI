@@ -1,43 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FORM DRUNI</title>
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-    <script src="https://druni--int.sandbox.lightning.force.com/lightning/lightning.out.js"></script>
-    <style>
-    .slds-visual-picker_vertical .slds-visual-picker__figure {
-      height: inherit !important;
+<html>
+<body onload="init()">
+The content of the body element is displayed in your browser.
+</body>
+<script type='text/javascript' src="druni--int.sandbox.my.salesforce-sites.com
+/lightning/lightning.out.js"></script>
+<div id='container2341'></div>
+<script type='text/javascript'>
+function init(){
+    $Lightning.use("c:FlowToSiteApp",    // name of the Lightning app
+        function() {                  
+            console.log('Callback1');// Callback once framework and app loaded
+            $Lightning.createComponent(
+                "c:FlowToSite", // top-level component of your app
+                { },                  // attributes to set on the component when created
+                "container2341",   // the DOM location to insert the component
+                function(cmp) { 
+                    console.log('Callback2');// callback when component is created and active on the page
+                }
+            );
+        },
+        'https://druni--int.sandbox.my.site.com/'  // Experience Cloud site endpoint
+    );
+    console.log('FIN');
     }
-
-     .runtime_appointmentbookingFlowLocation .slds-visual-picker_vertical {
-        display: inline-flex !important;
-      }
-  </style>
-  <script>
-    function init(){
-        $Lightning.use("c:embeddedCaseFormWebApp",    // name of the Lightning app
-            function() {                  // Callback once framework and app loaded
-                console.log('Callback');
-                $Lightning.createComponent(
-                    "c:embeddedCaseFormWeb", // top-level component of your app
-                    { },                  // attributes to set on the component when created
-                    "contenedorFlujo",   // the DOM location to insert the component
-                    function(cmp) { // callback when component is created and active on the page
-                    }
-                );
-            },
-            'https://druni--int.sandbox.my.site.com/vforcesite'  // Experience Cloud site endpoint
-        );
-        }
-    </script>
-  </head>
-  <body>
-    <main>
-      <div id="contenedorFlujo"></div>
-      <p>HELLOO</p>
-    </main>
-  </body>
+</script>
 </html>
