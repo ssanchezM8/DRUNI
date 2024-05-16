@@ -1,8 +1,10 @@
 <div id='contenedorFlujo'></div>
 <script type='text/javascript' src="https://druni--int.sandbox.lightning.force.com/lightning/lightning.out.js"></script>
+<script type='text/javascript'>
 function init(){
     $Lightning.use("c:embeddedCaseFormWebApp",    // name of the Lightning app
         function() {                  // Callback once framework and app loaded
+            console.log('Callback');
             $Lightning.createComponent(
                 "c:embeddedCaseFormWeb", // top-level component of your app
                 { },                  // attributes to set on the component when created
@@ -11,7 +13,7 @@ function init(){
                 }
             );
         },
-        'https://ssanchezm8.github.io/DRUNI/'  // Experience Cloud site endpoint
+        '	https://druni--int.sandbox.my.site.com/vforcesite'  // Experience Cloud site endpoint
     );
     }
 </script>
