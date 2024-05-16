@@ -6,8 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>FORM DRUNI</title>
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
-	<script src="https://druni--int.sandbox.lightning.force.com/lightning/lightning.out.js"></script>
-  	<script>
+    <script src="https://druni--int.sandbox.lightning.force.com/lightning/lightning.out.js"></script>
+    <style>
+    .slds-visual-picker_vertical .slds-visual-picker__figure {
+      height: inherit !important;
+    }
+
+     .runtime_appointmentbookingFlowLocation .slds-visual-picker_vertical {
+        display: inline-flex !important;
+      }
+  </style>
+  <script>
     $Lightning.use("ltng:outApp",
 
     function() { // Callback once framework and app load
